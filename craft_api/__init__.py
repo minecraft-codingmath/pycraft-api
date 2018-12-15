@@ -47,3 +47,16 @@ class CraftAPI:
                    'args': {'position': position}}
         message = msgpack.packb(command, use_bin_type=True)
         self.socket.send(message)
+
+
+    def block_exists(self, position):
+        """
+        block_exists -- check if a block exists in a given position
+
+        Arguments:
+        position -- the position to check
+        """
+        command = {'cmd': 'block_exists',
+                   'args': {'position': position}}
+        message = msgpack.packb(command, use_bin_type=True)
+        self.socket.send(message)
