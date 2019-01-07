@@ -4,6 +4,7 @@ craft_api.py -- The pycraft API
 """
 
 
+import subprocess
 import msgpack
 import zmq
 
@@ -20,6 +21,7 @@ class CraftAPI:
         self.context = zmq.Context()
         self.socket = self.context.socket(zmq.PUSH)
         self.socket.connect('tcp://localhost:1234')
+        junk = subprocess.Popen(['pycraft'], stdout=subprocess.PIPE)
 
 
     def add_block(self, position, texture):
