@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='craft-api',
-    version='0.1.0',
+    version='0.1.1',
     autor='The Pycraft Team @ SNUGifted \'18',
     long_description=long_desc,
     long_description_content_type='text/markdown',
